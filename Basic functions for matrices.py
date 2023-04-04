@@ -4,8 +4,8 @@
 #         list.append[value_row][value_collumn]
 import numpy as np
 np.set_printoptions(threshold=np.inf)
-# ------------------------------------------------------------------    
-# Indique explicitamente os elementos da matriz A = (a[i][j])3x3 tal que a[i][j] = i - j
+# # ------------------------------------------------------------------    
+# # Indique explicitamente os elementos da matriz A = (a[i][j])3x3 tal que a[i][j] = i - j
 # l = 3
 # c = 3
 # matrix = np.arange(9).reshape(3,3)
@@ -15,9 +15,9 @@ np.set_printoptions(threshold=np.inf)
 #         value = i - j
 #         matrix[i][j] = value
 # print(matrix)
-# ------------------------------------------------------------------
-# Construa as seguintes matrizes:
-# A = a[i][j]3x3 tal que 1 se i =j e 0 se i!=j
+# # ------------------------------------------------------------------
+# # Construa as seguintes matrizes:
+# # A = a[i][j]3x3 tal que 1 se i =j e 0 se i!=j
 # l = 3
 # c = 3
 # matrix = np.arange(9).reshape(3,3)
@@ -41,8 +41,8 @@ np.set_printoptions(threshold=np.inf)
 #             value = 0
 #         matrixb[i][j] = value
 # print(matrixb)
-# ------------------------------------------------------------------
-# Construa a matriz A de ordem 3 por 2 definida pela lei a ij = 1 se  i=j e i**2  se i !=j
+# # ------------------------------------------------------------------
+# # Construa a matriz A de ordem 3 por 2 definida pela lei a ij = 1 se  i=j e i**2  se i !=j
 # matrix = np.arange(6).reshape(3,2)
 # value = 0 
 # l = 3
@@ -55,13 +55,13 @@ np.set_printoptions(threshold=np.inf)
 #             value = (i+1) **2 
 #         matrix[i][j] = value
 # print(matrix)
-# ------------------------------------------------------------------
-# Dada uma matriz A m x n e as operações:
-# a. A_2, que transforma a matriz A numa outra matriz A’ m x 1 em que cada elemento da única
-# coluna de A’ é obtido somando-se os elementos da linha correspondente de A.
-# b. + A_3, que transforma a matriz A m x n numa outra matriz A” 1 x n em que cada elemento da
-# única linha de A” é obtido somando-se os elementos da coluna correspondente de A.
-# Nessas condições, se A for a matriz identidade de ordem p, calcule a expressão +A_1(+ A_2).
+# # ------------------------------------------------------------------
+# # Dada uma matriz A m x n e as operações:
+# # a. A_2, que transforma a matriz A numa outra matriz A’ m x 1 em que cada elemento da única
+# # coluna de A’ é obtido somando-se os elementos da linha correspondente de A.
+# # b. + A_3, que transforma a matriz A m x n numa outra matriz A” 1 x n em que cada elemento da
+# # única linha de A” é obtido somando-se os elementos da coluna correspondente de A.
+# # Nessas condições, se A for a matriz identidade de ordem p, calcule a expressão +A_1(+ A_2).
 
 # # Criando as variáveis 
 # coluna = int(input("Qual o numero de colunas"))
@@ -98,8 +98,8 @@ np.set_printoptions(threshold=np.inf)
 #         matrix_A_3[j] = value
 #     return f'+|A da matriz A é igual a:\n{matrix_A_3}\n'
 # print(A_3(matrix))
-# ------------------------------------------------------------------
-# Seja A = [[1,3,6],[2,-5,8],[4,2,7]] determinar o traço de A
+# # ------------------------------------------------------------------
+# # Seja A = [[1,3,6],[2,-5,8],[4,2,7]] determinar o traço de A
 # A = [[1,3,6],[2,-5,8],[4,2,7]]
 
 # def traco_matriz(matriz):
@@ -110,7 +110,7 @@ np.set_printoptions(threshold=np.inf)
 #                 traco.append(matriz[i][j])
 #     return f'O traco é a soma de {traco} que é igual a: {sum(traco)}'
 # print(traco_matriz(A))
-# ------------------------------------------------------------------
+# # ------------------------------------------------------------------
 
 # # Escreva a transposta da matriz A = [[3,-1],[2,4],[5,0]] 
 # # Matriz original
@@ -128,9 +128,9 @@ np.set_printoptions(threshold=np.inf)
 #     return f'A transposta da matriz é igual a:\n{transposta}'
 # print(transposta_matriz(A))
 
-# ------------------------------------------------------------------
+# # ------------------------------------------------------------------
 
-# # Determine o traço da matriz A de ordem 3 definida por a[i][j] = i+j+2.
+# # # Determine o traço da matriz A de ordem 3 definida por a[i][j] = i+j+2.
 
 # #Função da transposta    
 # def traco_matriz(matriz):
@@ -154,3 +154,13 @@ np.set_printoptions(threshold=np.inf)
 
 # #chamando a função
 # print(traco_matriz(matriz))
+
+# ------------------------------------------------------------------
+matriz_1 = np.arange(6).reshape(3,2)
+matriz_2 = np.arange(8).reshape(2,4)
+resultante = np.arange(12).reshape(3,4)
+print(matriz_1)
+print(matriz_2)
+print(resultante)
+
+        
