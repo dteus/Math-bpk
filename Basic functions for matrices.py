@@ -156,11 +156,18 @@ np.set_printoptions(threshold=np.inf)
 # print(traco_matriz(matriz))
 
 # ------------------------------------------------------------------
-matriz_1 = np.arange(6).reshape(3,2)
-matriz_2 = np.arange(8).reshape(2,4)
-resultante = np.arange(12).reshape(3,4)
-print(matriz_1)
-print(matriz_2)
-print(resultante)
+matriz_1 = [[1,0],[1,1],[2,3]]
+matriz_2 = [[2,0,1,2],[1,1,1,2]]
+resultante = [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+print(np.array(matriz_1),'\n\n')
+print(np.array(matriz_2),'\n\n')
+print(np.array(resultante),'\n\n')
+for i in range(len(resultante)):
+    for k in range(len(resultante[0])):
+        value = 0
+        for j in range(len(matriz_1[0])):
+            value += matriz_1[i][j] * matriz_2[j][k] 
+        resultante[i][k] = value
 
-        
+print(np.array(resultante))
+print(np.matmul(matriz_1,matriz_2))
