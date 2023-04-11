@@ -156,18 +156,27 @@ np.set_printoptions(threshold=np.inf)
 # print(traco_matriz(matriz))
 
 # ------------------------------------------------------------------
-matriz_1 = [[1,0],[1,1],[2,3]]
-matriz_2 = [[2,0,1,2],[1,1,1,2]]
-resultante = [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-print(np.array(matriz_1),'\n\n')
-print(np.array(matriz_2),'\n\n')
-print(np.array(resultante),'\n\n')
-for i in range(len(resultante)):
-    for k in range(len(resultante[0])):
-        value = 0
-        for j in range(len(matriz_1[0])):
-            value += matriz_1[i][j] * matriz_2[j][k] 
-        resultante[i][k] = value
+# matriz_1 = [[1,0],[1,1],[2,3]]
+# matriz_2 = [[2,0,1,2],[1,1,1,2]]
+# resultante = [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+# print(np.array(matriz_1),'\n\n')
+# print(np.array(matriz_2),'\n\n')
+# print(np.array(resultante),'\n\n')
+# for i in range(len(resultante)):
+#     for k in range(len(resultante[0])):
+#         value = 0
+#         for j in range(len(matriz_1[0])):
+#             value += matriz_1[i][j] * matriz_2[j][k] 
+#         resultante[i][k] = value
 
-print(np.array(resultante))
-print(np.matmul(matriz_1,matriz_2))
+# print(np.array(resultante))
+# print(np.matmul(matriz_1,matriz_2))
+
+# ------------------------------------------------------------------
+# homens = [[80,120]]
+# mulheres = [[100,200]]
+# adultos = [[20,20,20],[10,20,30]]
+# homens_total = np.matmul(homens, adultos)
+# mulheres_total = np.matmul(mulheres, adultos)
+# print(f'A quantidade total de proteinas consumidas por homens adultos e crianças é de {homens_total[0][0]}')
+# print(f'A quantidade total de gorduras consumidas por mulheres adultas e crianças é de {mulheres_total[0][1]}')
