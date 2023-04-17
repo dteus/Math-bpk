@@ -180,3 +180,51 @@ np.set_printoptions(threshold=np.inf)
 # mulheres_total = np.matmul(mulheres, adultos)
 # print(f'A quantidade total de proteinas consumidas por homens adultos e crianças é de {homens_total[0][0]}')
 # print(f'A quantidade total de gorduras consumidas por mulheres adultas e crianças é de {mulheres_total[0][1]}')
+
+
+#Importa a biblioteca string do python e armazena o alfabeto em uma variavel
+import string
+a = list(string.ascii_uppercase)
+#chave de teste 
+chave = [[2,3],
+         [1,2]]
+#Se necessário podemos criar qualquer outra chave inserindo o comando
+# chave = input("Qual a chave encriptadora?")
+
+#Arruma o alfabeto ascii nativo do python para ficar equivalente ao exercicio
+a.remove('K')
+a.append(' ')
+#Função para encriptar a mensagem
+def encriptografar(matriz):
+
+    #encripta a mensagem multiplando a matriz pela chave
+    mensagem_encriptografada = np.matmul(matriz,chave)
+
+    #retorna a mensagem encriptada para o usuario
+    return f'A Mensagem encriptada é:\n {mensagem_encriptografada}\n'
+
+#Função para decodificar a mensagem
+def criptografia(matriz):
+
+    #Decodificação da mensagem
+    mensagem = np.matmul(matriz,np.linalg.inv(chave))
+
+    #Variavel que vai armazenar a mensagem escrita em forma de string
+    mensagem_codificada = ''
+    
+    #Loop para escrever a mensagem usando o codigo decodificado
+    for i in range(2):
+        for j in range(2):
+            mensagem_codificada += a[int(mensagem[i][j])-1]
+
+    #Retorna apenas a mensagem escrita, já que a matriz decodificada não é mais útil        
+    return f'A mensagem decodificada é : {mensagem_codificada}\n'
+
+
+#Chamando a função para encriptografar
+print(encriptografar([[15,1],
+                    [25,0]]))
+
+#Chamando a função para decodificar
+print(criptografia([[31,47],
+                    [50,75]]))
