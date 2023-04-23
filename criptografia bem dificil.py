@@ -4,12 +4,13 @@ import numpy as np
 import string
 #importa a biblioteca random
 import random 
+import math
 
 #Arruma o alfabeto ascii nativo do python para ficar equivalente ao exercicio
 a = list(string.ascii_uppercase)
 a.remove('K')
 a.insert(0,' ')
-a.insert(0,' ')
+
 # ------------------------------------------------------------------------------------------
 #Função para encriptar a mensagem
 def encriptografar(chave):
@@ -32,8 +33,8 @@ def decodificar(mensagem):
     for i in range(2):
         for j in range(tamanho_coluna):
                 #Se o valor for valido ele reproduz uma letra
-                if 0 < int(mensagem[i][j]) < 27:
-                    mensagem_decodificada += a[round(mensagem[i][j])]
+                if 0 < int(mensagem[i][j]) < 26:
+                    mensagem_decodificada += a[math.ceil(mensagem[i][j])]
                 #Se o valor não for válido ele reproduz um espaço
                 else:
                     mensagem_decodificada += ' '  
